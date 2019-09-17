@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #669acc;
+    --primary-color-light: #86bddc;
+    --secondary-color: #679966;
+    --secondary-color-light: #9acc99;
+    --light-color: #f4f4f4;
+    --white: #ffffff;
+    --grey: ##333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    margin: 0 5vh;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+/* showcase */
+
+#showcase {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: url(/img/beach-dawn-dusk-2909090.jpg) no-repeat center/cover;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+
+}
+
+
+#showcase .container {
+    margin: auto;
+    margin-top: 50vh;
+    margin-right: 10ch;
+    
+
+}
+
+#showcase h1 {
+    font-size:3rem;
+    text-align: right;
+    margin: initial;
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+
+#showcase h2{
+    font-size: 2rem;
+    text-align: right;
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+
+#showcase h3 {
+    font-size: 2rem;
+    text-align: right;
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+
+/* Boxes */
+
+#boxes {
+
+
+    background: var(--light-color);
+    height: 60vh;
+}
+
+
+
+#boxes .container {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    vertical-align: middle;
+
+}
+
+#boxes .box {
+    /* background: var(--secondary-color); */
+    padding: 15vh 0;
+    height: 80%;
+    width: 90%;
+    /* text-align: center; */
+    /* vertical-align: middle;  */
+}
+
+#boxes i{
+    font-size: 6rem;
+}
+
+#boxes .left i{
+    margin-left: 4.5rem;
+}
+
+#boxes .right i{
+    margin-right: 4.5rem;
+}
+
+#boxes h3{
+    margin-top: 5vh;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    color: #574B60;
+}
+
+/* Transport */
+#transport {
+    background: url(/img/bicycle-city-fruit-137078.jpg) no-repeat center/cover;
+    height: 100vh;
+
+}
+
+#transport .container{
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    padding-top: 10vh;
+}
+
+#transport .text {
+    /* margin-top: 20vh; */
+    width: 90%;
+    color: var(--light-color);
+
+    font-size: 1.5rem;
+    text-align: right;
+    text-transform: uppercase;
+    
+}
+
+/* break */
+
+#break {
+    background: var(--light-color);
+    height: 50vh;
+}
+
+
+/* Offer */
+#offer {
+    background: var(--light-color);
+    height: 300vh;
+}
+
+#offer .container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* padding-top:5vh; */
+    margin: 0;
+}
+
+#offer h3 {
+    /* margin: 1rem; */
+    /* display: none; */
+}
+
+#offer .light {
+    background: #eee;
+}
+
+#offer .dark {
+    background: #7D8491;
+}
+
+#offer .list {
+    height: 100%;
+}
+
+#offer .item {
+    padding-top: 10%;
+    width: 100%;
+    height: 11.11%;
+    /* background: var(--secondary-color); */
+    /* padding-top:20%; */
+    text-align: center;
+
+}
+
+#offer image {
+    overflow: hidden;
+    /* position: relative; */
+
+
+}
+
+#offer img {
+    width: 90%;
+    position: absolute;
+    /* display: none; */
+    /* visibility: hidden; */
+
+}
+
+footer {
+    background: #333;
+    color: var(--light-color);
+    text-align: center;
+    padding: 5px;
+}
+
+/* Navigation */
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: #eee;
+    position: fixed;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #444;
+}
+
+nav a#openup {
+    display: none;
+}
+
+
+@media screen and (max-width: 580px) {
+    .hide-on-small {
+        display: none;
+    }
+    #showcase {
+        height: 50vh;
+    }
+
+    nav {
+        height: auto;
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav li {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        background: #333;
+        border-bottom: 1px solid #555;
+    }
+    nav a:hover {
+        background: #444;
+    }
+    nav a#openup:after {
+        content: "|||";
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Safari and Chrome */
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
+    nav a#openup {
+        display: block;
+        background-color: #333;
+        width: 100%;
+        position: relative;
+    }
+}
+
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+
